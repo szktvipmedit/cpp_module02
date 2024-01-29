@@ -1,8 +1,8 @@
-CPPS = 
+CPPS = Fixed.cpp main.cpp
 
 OBJS = $(CPPS:.cpp=.o)
 
-NAME =
+NAME = OrthodoxCanonialForm
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 

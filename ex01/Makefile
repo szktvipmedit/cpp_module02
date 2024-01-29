@@ -1,8 +1,8 @@
-CPPS = 
+CPPS = main.cpp Fixed.cpp
 
 OBJS = $(CPPS:.cpp=.o)
 
-NAME =
+NAME = fixed
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
