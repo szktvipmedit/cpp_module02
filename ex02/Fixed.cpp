@@ -57,8 +57,9 @@ const Fixed &Fixed::max(const Fixed &fix1, const Fixed &fix2){
 }
 
 
-void Fixed::operator=(const Fixed &other){
+Fixed& Fixed::operator=(const Fixed &other){
     fixedPointNum = other.fixedPointNum;
+    return (*this);
 }
 
 std::ostream& operator<<(std::ostream& out, const Fixed &other){

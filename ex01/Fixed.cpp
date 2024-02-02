@@ -19,9 +19,10 @@ Fixed::Fixed(const int value): fixedPointNum(value << fractionalBits){
 Fixed::Fixed(const float value): fixedPointNum(roundf(value * (1 << fractionalBits))){
     std::cout<<"Float constructor called   "<< std::endl;
 }
-void Fixed::operator=(const Fixed &other){
+Fixed& Fixed::operator=(const Fixed &other){
     std::cout<<"Copy assignment operator called"<<std::endl;
     setRawBits(other.getRawBits());
+    return (*this);
 }
 
 std::ostream& operator<<(std::ostream& out, const Fixed &other){

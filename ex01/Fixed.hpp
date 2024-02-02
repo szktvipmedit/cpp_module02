@@ -13,7 +13,7 @@ class Fixed{
         Fixed(const Fixed &other);
         Fixed(const int value);
         Fixed(const float value);
-        void operator =(const Fixed &other);
+        Fixed& operator =(const Fixed &other);
         ~Fixed();
         int getRawBits( void ) const;
         void setRawBits( int const raw );

@@ -27,7 +27,7 @@ class Fixed{
         static const Fixed &max(const Fixed &fix1, const Fixed &fix2);
 
     public:
-        void operator =(const Fixed &other);
+        Fixed& operator =(const Fixed &other);
     public:
         bool operator >(const Fixed &other);
         bool operator <(const Fixed &other);
