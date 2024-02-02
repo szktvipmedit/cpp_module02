@@ -9,6 +9,7 @@ bool bsp( Point const a, Point const b, Point const c, Point const point){
     b1 = sign(point, a, b).toFloat() < 0.0f;
     b2 = sign(point, b, c).toFloat() < 0.0f;
     b3 = sign(point, c, a).toFloat() < 0.0f;
-    bool onEdge = std::abs(sign(point, a, b).toFloat()) < EPSILON || std::abs(sign(point, b, c).toFloat()) < EPSILON || std::abs(sign(point, c, a).toFloat()) < EPSILON;
+    bool onEdge = std::abs(sign(point, a, b).getRawBits()) == 0 || std::abs(sign(point, b, c).getRawBits()) == 0 || std::abs(sign(point, c, a).getRawBits()) == 0;
+    // return ((b1 == b2) && (b2 == b3));
     return ((b1 == b2) && (b2 == b3)) && !onEdge;
 }
