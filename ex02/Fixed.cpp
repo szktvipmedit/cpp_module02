@@ -103,24 +103,20 @@ Fixed Fixed::operator /(const Fixed &other){
 
 //------The 4 increment/decrement (pre-increment and post-increment, pre-decrement and post-decrement) operators------
 Fixed &Fixed::operator ++(){
-    // fixedPointNum += (EPSILON * (1 << fractionalBits));
     fixedPointNum++;
     return *this;
 }
 Fixed Fixed::operator ++(int){
     Fixed tmp = *this;
-    // fixedPointNum += (EPSILON * (1 << fractionalBits));
     fixedPointNum++;
     return tmp;
 }
-Fixed Fixed::operator --(){
-    // fixedPointNum -= (EPSILON * (1 << fractionalBits));
+Fixed &Fixed::operator --(){
     fixedPointNum--;
     return *this;
 }
 Fixed Fixed::operator --(int){
     Fixed tmp = *this;
-    // fixedPointNum -= (EPSILON * (1 << fractionalBits));
     fixedPointNum--;
     return tmp;
 }
