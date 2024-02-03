@@ -40,7 +40,7 @@ Fixed &Fixed::min(Fixed &fix1, Fixed &fix2){
         return fix2;
     return fix1;
 }
-const Fixed &Fixed::min(const Fixed &fix1, const Fixed &fix2){
+Fixed const &Fixed::min(const Fixed &fix1, const Fixed &fix2){
     if(fix1.fixedPointNum > fix2.fixedPointNum)
         return fix2;
     return fix1;
@@ -50,7 +50,7 @@ Fixed &Fixed::max(Fixed &fix1, Fixed &fix2){
         return fix1;
     return fix2;
 }
-const Fixed &Fixed::max(const Fixed &fix1, const Fixed &fix2){
+Fixed const &Fixed::max(const Fixed &fix1, const Fixed &fix2){
     if(fix1.fixedPointNum > fix2.fixedPointNum)
         return fix1;
     return fix2;

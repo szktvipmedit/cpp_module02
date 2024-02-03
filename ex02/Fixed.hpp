@@ -22,9 +22,9 @@ class Fixed{
         float toFloat( void ) const;
         int toInt( void ) const;
         static Fixed &min(Fixed &fix1, Fixed &fix2);
-        static const Fixed &min(const Fixed &fix1, const Fixed &fix2);
+        static Fixed const &min(const Fixed &fix1, const Fixed &fix2);
         static Fixed &max(Fixed &fix1, Fixed &fix2);
-        static const Fixed &max(const Fixed &fix1, const Fixed &fix2);
+        static Fixed const &max(const Fixed &fix1, const Fixed &fix2);
 
     public:
         Fixed& operator =(const Fixed &other);
